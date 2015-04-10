@@ -1,0 +1,8 @@
+// This is a manifest file that'll be compiled into app.css, which will include all the files listed below.
+
+@import "normalize"; // Normalize the Browsers 
+@import "ionicons"; //icon styles
+@import "variables"; // Variables/constants/placeholders
+@import "mixins"; // Generic css functions
+@import "modules"; // Site sections,componenets,templates...etc;
+@import "media-queries"; // Responsive Stuff

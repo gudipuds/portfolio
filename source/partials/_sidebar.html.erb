@@ -1,0 +1,29 @@
+<aside class="sidebar">
+	<div>
+		<ul>
+				<% data.nav.links.each do |links| %>
+				<% if links.list_index == list_index %>
+					<li class="<% if links.sub_menu %>has-submenu<% end %> blue-bar">
+						<%=link_to links.name,links.link%>
+						<% if links.sub_menu %>
+							<ul class="sub-menu">
+								<% links.sub_menu.each do |sub_link| %>
+									<li>   
+ 										<%=link_to sub_link.name,sub_link.link%>
+									</li>
+									<%if sub_link.sub_menu %>
+									<% sub_link.sub_menu.each do |sub_link2| %>
+										<li>   
+	 										<%=link_to sub_link2.name,sub_link2.link,:class=>"sidebar-sub-link",:relative=> true%>
+										</li>
+										<% end %>
+									<% end %>
+								<% end %>
+							</ul>
+						<% end %>
+					</li>
+				<% end %>
+				<% end %>
+			</ul>
+	</div>
+</aside>

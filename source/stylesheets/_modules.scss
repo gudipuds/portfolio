@@ -1,0 +1,366 @@
+@charset "utf-8";
+html, body {
+      *height: 100%;
+    width: 100%;
+    margin: 0;
+    overflow-x:hidden;
+}
+html{
+	height:100%;
+}
+body {
+    text-align: center;
+    font-family: $default-font-family;
+    background-color: $body-color;
+    min-height:100%;
+    position:relative;
+    overflow:hidden;
+}
+.main {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    display: table;
+    max-width: $default-site-width;
+    margin: 0 auto;
+    width: 100%;
+    margin-bottom:130px; /*footer width + top margin + explore top margin*/
+}
+/* ==========================================================================
+  							HEADER
+   ========================================================================== */
+header {
+    margin: 0 auto;
+    background-color: $header-menu-color;
+    vertical-align: bottom;
+    width: 100%;
+    display: inline-block;
+    section {
+    }
+    .header-outer {
+    }
+}
+.head-img {
+    background: $head-color;
+    height: 20px;
+    *height: 100%;
+}
+.site-logo {
+    float: left;
+    max-width: 65%;
+    height: 32px;
+    font: 0/0 a;
+    padding-left: .5%;
+}
+.site-logo:before {
+    content: ' ';
+    display: inline-block;
+    vertical-align: middle;
+    height: 105%;
+}
+.site-logo img {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 278px;
+    max-height: 45px;
+    height: auto;
+    width: 100%;
+}
+.desktop-link {
+    display: none !important;
+}
+.mobile-link, .sub-top-link, .mobile-only-links {
+    display: block;
+}
+.menu-link {
+    cursor: pointer;
+    display: block;
+    background-color: $btn-color;
+    float: right;
+    padding: 8px;
+    font-size: 8px;
+    a {
+        display: block;
+        color: $btn-font-color;
+        text-decoration: none;
+        border: 1px solid $btn-font-color;
+        padding: 3px 6px;
+        border-radius: 5px;
+    }
+}
+.menu-link:hover {
+    background-color: $btn-hover-color;
+}
+.menu {
+    border-top: 1px solid $nav-mobile-border-color;
+    display: none;
+    clear: both;
+    min-width: inherit;
+    float: none;
+    width: 100%;
+    ul {
+        display: inline;
+        padding: 0px;
+        border-top: 1px solid #808080;
+        li.has-submenu > a:before, li.blue-bar a:before {
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: block;
+            padding: 0.8em;
+            color: $nav-arrow-color;
+        }
+        li.blue-bar a:before {
+            color: $btn-font-color;
+        }
+        li.blue-bar a {
+            background-color: $btn-color;
+            color: $btn-font-color;
+            border-radius: 0px;
+        }
+        li.blue-bar a:hover {
+            background-color: $btn-hover-color;
+        }
+        li {
+            display: block;
+            text-align: left;
+            a {
+                border-radius: 0px;
+                color: $nav-mobile-font-color;
+                display: block;
+                padding: 0.8em;
+                border-bottom: 1px solid $nav-mobile-border-color;
+                position: relative;
+                text-decoration: none;
+                background-color: $nav-mobile-color;
+            }
+            a:hover {
+                background-color: $nav-mobile-hover-color;
+            }
+            ul.sub-menu {
+                overflow: hidden;
+                display: none;
+                z-index: 100;
+                *background-color: #f4f4f4;
+                padding: 0px;
+                border: none;
+                position: relative;
+                left: auto;
+                top: auto;
+                border: none;
+                .ion-chevron-right:before {
+                    content: "\f125";
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    display: block;
+                    padding: 0.8em;
+                    color: $nav-arrow-color;
+                }
+                li {
+                    a {
+                        background-color: $nav-mobile-color;
+                        padding-left: 40px;
+                    }
+                    a:hover {
+                        background-color: $nav-mobile-hover-color;
+                    }
+                }
+                li.back-link {
+                    font-family: $font-family2;
+                    cursor: pointer;
+                    a {
+                        background-color: $nav-back-color;
+                        color: $nav-font-back-color;
+                    }
+                    a:before {
+                        position: absolute;
+                        left: 0px;
+                        padding: 0.83em 0.8em 0.8em 1.5em;
+                        top: 0px;
+                        color: $nav-arrow-back-color;
+                    }
+                }
+            }
+        }
+    }
+}
+/* ==========================================================================
+  							HOME PAGE
+   ========================================================================== */
+.bx-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+.bx-window {
+    margin-top: -2px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.bx-window-img img {
+    max-width: $default-site-width;
+    max-height: 650px;
+    height: auto;
+    width: 100%;
+}
+.description {
+    text-align: left;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    padding: 0;
+    width: 100%;
+    background-color: $white-background;
+    ul {
+        margin: 0;
+    }
+    .entry-content {
+        padding-left: 20px;
+    }
+   
+}
+/* ==========================================================================
+  							CONTENT
+   ========================================================================== */
+.main_content {
+    display: table-row;
+    height: 100%;
+    .sub-back-link {
+        font-family: $font-family2;
+        margin: 0px;
+        padding: 0px;
+        clear: both;
+        text-align: left;
+        list-style: none;
+        cursor: pointer;
+        li {
+            background-color: $nav-back-color;
+            position: relative;
+            a {
+                padding: 0.8em 0.8em 0.8em 2.5em;
+                display: block;
+                background-color: $nav-back-color;
+                color: $nav-font-back-color;
+                border-bottom: 1px solid $nav-mobile-border-color;
+                border-top: 1px solid $nav-mobile-border-color;
+            }
+            a:before {
+                position: absolute;
+                left: 0px;
+                padding: 0.9em 0.8em 0.8em 1.5em;
+                top: 0px;
+                color: $nav-arrow-back-color;
+            }
+        }
+    }
+    .content-wrapper {
+        overflow: hidden;
+        padding: 10px 10px 0 10px;
+        .content {
+            margin-left: 0;
+            box-sizing: border-box;
+        }
+        .entry {
+            h1 {
+                text-align: left;
+                margin-top: 0px;
+                margin-bottom: 0px;
+                font-size: $content-mobile-header-font-size;
+                line-height: 27px;
+                font-weight: normal;
+                color: $content-header-font-color;
+            }
+            .entry-content {
+                text-align: left;
+                font-size: $content-mobile-font-size;
+                line-height: 21.75px;
+                P {
+                    color: $content-font-color;
+                    strong {
+                        color: $content-header-font-color;
+                    }
+                }
+                h3,a.header-link {
+                    color: $content-header-font-color;
+                }
+                a.header-link:hover {
+                    color: $btn-hover-color;
+                }
+            }
+        }
+        aside.sidebar {
+            display: none;
+            float: left;
+            width: $default-sidebar-width;
+            box-sizing: border-box;
+            padding-right: 20px;
+            margin-bottom: 10px;
+            ul {
+                list-style: none;
+                margin: 0px;
+                padding: 0px;
+                .blue-bar > a:first-child {
+                    text-align: center;
+                    background-color: $btn-color;
+                    color: $btn-font-color;
+                    padding: 5px 12px;
+                    line-height: 29px;
+                    border-radius: 0px;
+                    margin-bottom: 3px;
+                    font-size: $sidebar-header-font-size;
+                }
+                .blue-bar > a:first-child:hover {
+                    background-color: $btn-hover-color;
+                }
+                ul {
+                    padding-left: 0px;
+                }
+                a.sidebar-sub-link {
+                    font-size: 12px;
+                }
+                a {
+                    text-decoration: none;
+                    text-align: left;
+                    display: block;
+                    padding: 9px 20px;
+                    background-color: $nav-hover-color;
+                    *background: rgba(0,0,0,0.1);
+                    color: $nav-font-color;
+                    margin-bottom: 1px;
+                    font-size: $sidebar-font-size;
+                }
+                a:hover {
+                    background-color: $nav-hover2-color;
+                }
+            }
+        }
+    }
+}
+/* ==========================================================================
+  							FOOTER
+   ========================================================================== */
+footer {
+    margin: 25px auto;
+    height: 50px;
+    position: absolute;
+	bottom: 0;
+	left:0;
+	right:0;
+	width:100%;
+	max-width: $default-site-width;
+        .copyright {
+            float: left;
+            position: relative;
+            font-size: 7px;
+            color: $footer-copyright-color;
+            text-align: left;
+        }
+}
+
+
+a.link, a.link:visited {
+    color: $link-default-color;
+}
+a.link:active, a.link:focus, a.link:hover {
+    color: $link-hover-color;
+}
